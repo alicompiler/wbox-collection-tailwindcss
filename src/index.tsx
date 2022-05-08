@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./index.css"
+import './index.css';
+import { Example } from './__examples/Example';
 
 ReactDOM.render(
     <React.StrictMode>
-    <h1 className="text-3xl font-bold underline w-full text-center">
-        wbox-collection-tailwindcss
-    </h1>
+        <div className="light">
+            <Example />
+        </div>
     </React.StrictMode>,
     document.getElementById('root'),
 );
