@@ -13,4 +13,5 @@ export const defaultTheme: Theme = {
         hoveredRow: 'bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600',
         bodyCell: 'px-6 py-4',
     },
+    spinner: 'inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600'
 };

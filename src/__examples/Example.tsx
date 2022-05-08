@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Field, HttpFetchOptions, CollectionProvider, InfiniteScroll } from 'wbox-collections';
+import { Spinner } from '../Components/Spinner';
 import { Table } from './../Table/Table';
 
 export function Example() {
@@ -21,6 +22,7 @@ export function Example() {
     return (
         <CollectionProvider fetchOptions={dataOptions} fields={fields}>
             <div>
+                <Spinner />
                 <InfiniteScroll>
                     <Table />
                 </InfiniteScroll>

@@ -12,4 +12,5 @@ export interface TableTheme {
 
 export interface Theme {
     table: TableTheme;
+    spinner: string;
 }
