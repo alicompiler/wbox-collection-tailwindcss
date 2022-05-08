@@ -2,8 +2,8 @@ import { Theme } from './Theme';
 
 export const defaultTheme: Theme = {
     table: {
-        table: 'relative overflow-x-auto shadow-md sm:rounded-lg w-full',
-        head: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
+        table: 'relative overflow-x-auto shadow-md sm:rounded-lg',
+        head: 'w-full text-sm text-gray-500 dark:text-gray-400',
         headRow: '',
         headCell: 'px-6 py-3',
         body: '',

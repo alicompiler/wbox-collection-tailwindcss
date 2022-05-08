@@ -3,13 +3,20 @@ import { useTheme } from '../Theme/UseTheme';
 import { TableBody } from './TableBody';
 import { TableHead } from './TableHead';
 
-export function Table() {
+export type RowStyle = "normal" | "hover" | "strip";
+
+interface Props {
+    fullWidth?: boolean;
+    rowStyle?: RowStyle;
+}
+
+export function Table(props: Props) {
     const theme = useTheme();
     return (
         <div>
-            <table className={theme.table.table}>
+            <table className={`${theme.table.table} __table ${props.fullWidth ? 'w-full' : ''}`}>
                 <TableHead />
-                <TableBody />
+                <TableBody rowStyle={props.rowStyle ?? "normal"} />
             </table>
         </div>
     );
