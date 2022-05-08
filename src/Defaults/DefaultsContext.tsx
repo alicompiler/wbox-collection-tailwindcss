@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Defaults } from "./Defaults";
 
 const defaults : Defaults = {
@@ -9,3 +9,8 @@ const defaults : Defaults = {
 
 export const DefaultsContext = React.createContext<Defaults>(defaults);
 export const DefaultsProvider = DefaultsContext.Provider;
+
+
+export function useDefaults() {
+    return useContext(DefaultsContext);
+}

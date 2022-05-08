@@ -10,7 +10,13 @@ export interface TableTheme {
     bodyCell: string;
 }
 
+export interface AlertTheme {
+    empty: string;
+    error: string;
+    loading: string;
+}
 export interface Theme {
+    alert: AlertTheme;
     table: TableTheme;
     spinner: string;
 }
