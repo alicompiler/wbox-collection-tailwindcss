@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Field, HttpFetchOptions, CollectionProvider, InfiniteScroll } from 'wbox-collections';
 import { Table } from './../Table/Table';
 import {PaginationActions} from "../Components/PaginationActions";
+import {DefaultsProvider} from "../Defaults/DefaultsContext";
 
 export function Example() {
     const [url, setUrl] = useState('http://localhost:8080/collection?page=0');
@@ -20,11 +21,13 @@ export function Example() {
     ];
 
     return (
-        <CollectionProvider fetchOptions={dataOptions} fields={fields} pageSize={100}>
-            <div>
-                <PaginationActions />
-                <Table />
-            </div>
-        </CollectionProvider>
+        <DefaultsProvider>
+            <CollectionProvider fetchOptions={dataOptions} fields={fields} pageSize={100}>
+                <div>
+                    <PaginationActions />
+                    <Table />
+                </div>
+            </CollectionProvider>
+        </DefaultsProvider>
     );
 }

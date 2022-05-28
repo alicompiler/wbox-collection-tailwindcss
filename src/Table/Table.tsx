@@ -2,15 +2,16 @@ import React from 'react';
 import { useTheme } from '../Theme/UseTheme';
 import { TableBody } from './TableBody';
 import { TableHead } from './TableHead';
+import {withCollection, WithCollectionProps} from "wbox-collections";
 
 export type RowStyle = "normal" | "hover" | "strip";
 
-interface Props {
+interface Props extends WithCollectionProps {
     fullWidth?: boolean;
     rowStyle?: RowStyle;
 }
 
-export function Table(props: Props) {
+function _Table(props: Props) {
     const theme = useTheme();
     return (
         <div>
@@ -21,3 +22,5 @@ export function Table(props: Props) {
         </div>
     );
 }
+
+export const Table = withCollection(_Table);
