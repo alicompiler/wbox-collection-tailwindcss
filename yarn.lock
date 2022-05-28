@@ -8401,10 +8401,10 @@ watchpack@^2.3.1:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-wbox-collections@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/wbox-collections/-/wbox-collections-0.1.3.tgz#4620f9a7e13a1adc587c899fa68d63edd18d433a"
-  integrity sha512-m0wuIxhLgevxyN4n8fLL4UGwmFlx5WRXXiWRzod5IRyG1yLXeq0dJ7ybS0chvTP+esKw7Mss4mOExhYjxq9c6w==
+wbox-collections@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/wbox-collections/-/wbox-collections-0.1.7.tgz#62b20e907a8435330741620a9865863101a2fda0"
+  integrity sha512-jL0sCAfWBtduWIS8nAHrXTCdwkV330Gp92ieq5nRmyVB3+SobBE1HBPf4oIfKtz8kQ+rBnaKtanbqk6IUUdCVw==
 
 wbox-context@^0.3.2:
   version "0.3.2"

@@ -5,9 +5,7 @@ import { Example } from './__examples/Example';
 
 ReactDOM.render(
     <React.StrictMode>
-        <div className="light">
-            <Example />
-        </div>
+        <Example />
     </React.StrictMode>,
     document.getElementById('root'),
 );

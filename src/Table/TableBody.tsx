@@ -12,15 +12,14 @@ interface Props {
 export function TableBody(props:Props) {
     const theme = useTheme();
     const state = useState<State>();
-    const [items] = useCollectionData();
     const fields = state.fields.filter(field => state.visibleFields.includes(field.name));
-    
+    const items = state.allItems;
     const rowClassName = {
         normal: theme.table.bodyRow,
         hover: theme.table.hoveredRow,
         strip: theme.table.stripedRow
     }[props.rowStyle];
-    
+
     return (
         <tbody className={theme.table.body}>
                 {(items as unknown[]).map((item: unknown, index) => (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Field, HttpFetchOptions, CollectionProvider, InfiniteScroll } from 'wbox-collections';
-import { Spinner } from '../Components/Spinner';
 import { Table } from './../Table/Table';
+import {PaginationActions} from "../Components/PaginationActions";
 
 export function Example() {
     const [url, setUrl] = useState('http://localhost:8080/collection?page=0');
@@ -20,12 +20,10 @@ export function Example() {
     ];
 
     return (
-        <CollectionProvider fetchOptions={dataOptions} fields={fields}>
+        <CollectionProvider fetchOptions={dataOptions} fields={fields} pageSize={100}>
             <div>
-                <Spinner />
-                <InfiniteScroll>
-                    <Table />
-                </InfiniteScroll>
+                <PaginationActions />
+                <Table />
             </div>
         </CollectionProvider>
     );

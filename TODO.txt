@@ -1,4 +1,2 @@
-- Table Component
-- Loading Component
-- Error Component
-- Empty Component
+- PaginationBar
+- Load Page
