@@ -1,22 +1,23 @@
-import {ServiceFactory, usePagingData} from "wbox-collections";
+import {ServiceFactory, State, usePagingData} from "wbox-collections";
 import React, {useMemo} from "react";
-import {useServiceFactory} from "wbox-context";
+import {useServiceFactory, useState} from "wbox-context";
 import {buildPagesArray} from "./BuildPagesArray";
 import {PageAction} from "./PageAction";
 import {useTheme} from "../../Theme/UseTheme";
 import {useDefaults} from "../../Defaults/DefaultsContext";
 
-interface Props {
+export interface PaginationBarProps {
     maxPageButtons?: number;
     hideWhenOnlyPage?: boolean;
     rightToLeft?: boolean;
 }
 
-export const PaginationBar = (props: Props) => {
+export const PaginationBar = (props: PaginationBarProps) => {
     const pagingData = usePagingData();
     const theme = useTheme();
     const defaults = useDefaults();
     const pages = buildPagesArray(pagingData.currentPage, pagingData.pageCount, props.maxPageButtons ?? defaults.maxPageButtons);
+    const loading = useState<State>().loading;
 
     return <div className={theme.pagination.wrapper}>
         <PrevButton/>
@@ -24,7 +25,7 @@ export const PaginationBar = (props: Props) => {
             {
                 pages.map((page, index) =>
                     <React.Fragment key={index}>
-                        <PageAction page={page} selected={pagingData.currentPage === page}/>
+                        <PageAction page={page} selected={loading ? false : pagingData.currentPage === page}/>
                     </React.Fragment>)
             }
         </div>
