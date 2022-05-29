@@ -16,13 +16,13 @@ const data = [
 ];
 
 let result = [...data];
-for(let i=0;i<100;i++){
+for(let i=0;i<500;i++){
     result = result.concat([...data]);
 }
 result = result.map((item,index) => ({...item , id: index+1}));
 
 app.get('/collection', function (req, res) {
-    
+
     const page = req.query.page ?? 0;
     const pageSize = 100;
     const items = result.slice(page*pageSize , (page*pageSize) + pageSize);

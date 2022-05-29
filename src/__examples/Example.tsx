@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Field, HttpFetchOptions, CollectionProvider, InfiniteScroll } from 'wbox-collections';
-import { Table } from './../Table/Table';
-import {PaginationActions} from "../Components/PaginationActions";
+import React, {useState} from 'react';
+import {CollectionProvider, Field, HttpFetchOptions} from 'wbox-collections';
+import {Table} from './../Table/Table';
 import {DefaultsProvider} from "../Defaults/DefaultsContext";
+import {PaginationBar} from "../Components/Pagination/PaginationBar";
 
 export function Example() {
     const [url, setUrl] = useState('http://localhost:8080/collection?page=0');
@@ -24,7 +24,7 @@ export function Example() {
         <DefaultsProvider>
             <CollectionProvider fetchOptions={dataOptions} fields={fields} pageSize={100}>
                 <div>
-                    <PaginationActions />
+                    <PaginationBar />
                     <Table />
                 </div>
             </CollectionProvider>

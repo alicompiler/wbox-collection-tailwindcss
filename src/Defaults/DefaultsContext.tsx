@@ -7,7 +7,10 @@ import {Alert} from "../Components/Alert";
 const defaults: Defaults = {
     loadingMessage: 'Loading Data...',
     emptyMessage: 'No Data',
-    errorMessage: 'Failed To Fetch Data'
+    errorMessage: 'Failed To Fetch Data',
+    nextButtonText: 'Next',
+    previousButtonText: 'Previous',
+    maxPageButtons: 7
 }
 
 export const DefaultsContext = React.createContext<Defaults>(defaults);

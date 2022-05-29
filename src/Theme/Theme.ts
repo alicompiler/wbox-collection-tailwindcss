@@ -15,8 +15,21 @@ export interface AlertTheme {
     error: string;
     loading: string;
 }
+
+export interface PaginationTheme {
+    wrapper: string;
+    threeDots: string;
+    pageButton: string;
+    selectedPageButton: string;
+    nextButtonText: string;
+    prevButtonText: string;
+    arrow: string;
+}
+
 export interface Theme {
     alert: AlertTheme;
     table: TableTheme;
+    pagination: PaginationTheme;
     spinner: string;
+    rightToLeft: boolean;
 }
