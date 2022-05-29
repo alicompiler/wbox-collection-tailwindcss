@@ -1,9 +1,8 @@
-import { Field, State, useCollectionData } from 'wbox-collections';
+import {Field, getFieldValue, State} from 'wbox-collections';
 import React from 'react';
-import { useState } from 'wbox-context';
-import { getFieldValue } from 'wbox-collections';
-import { useTheme } from '../Theme/UseTheme';
-import { RowStyle } from './Table';
+import {useState} from 'wbox-context';
+import {useTheme} from '../Theme/UseTheme';
+import {RowStyle} from './Table';
 
 interface Props {
     rowStyle: RowStyle;

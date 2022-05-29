@@ -1,5 +1,8 @@
-- PaginationBar (Centered)
-- withTailwindcssCollection
 - remove useCollectionData
 - Factory
-- fix build page array to selected page when not found in array
+
+
+Factory:
+    - TableFactory:
+        - pagination
+

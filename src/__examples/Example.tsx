@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {CollectionProvider, Field, HttpFetchOptions} from 'wbox-collections';
-import {Table} from './../Table/Table';
+import {Table} from '../Table/Table';
 import {DefaultsProvider} from "../Defaults/DefaultsContext";
 import {PaginationBar} from "../Components/Pagination/PaginationBar";
 
@@ -25,7 +25,7 @@ export function Example() {
             <CollectionProvider fetchOptions={dataOptions} fields={fields} pageSize={100}>
                 <div>
                     <PaginationBar />
-                    <Table />
+                    <Table fullWidth={true}  />
                 </div>
             </CollectionProvider>
         </DefaultsProvider>
